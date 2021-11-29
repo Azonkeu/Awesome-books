@@ -60,3 +60,7 @@
   color: #000;
   font-weight: 600;
 }
+
+.del {
+  display: none;
+}

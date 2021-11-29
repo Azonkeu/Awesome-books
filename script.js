@@ -18,14 +18,12 @@ const newBook = () => {
   }
 };
 
-// eslint-disable-next-line no-unused-vars
 function removeBook(id) {
   const data = localStorage.getItem('data');
   const convertedBooks = JSON.parse(data);
   const remainingBooks = convertedBooks.filter((book) => book.id !== id);
   const removedBooks = JSON.stringify(remainingBooks);
   localStorage.setItem('data', removedBooks);
-  window.location.reload();
 }
 
 const displayBookList = () => {
@@ -41,8 +39,8 @@ const displayBookList = () => {
       booklist += `<div>
       <p class="tit">${book.title}</p>
       <p class="auth">${book.author}</p>
-      <button class="delete" data-book-id = "${book.id}" id = "remove-button" onclick="removeBook(${book.id})">Remove</button>
-      <hr>
+      <button class="delete" data-book-id = "${book.id}" id = "remove-button" onclick="removeBook(${book.id}), window.location.reload();">Remove</button>
+      <hr id="hr">
       </div>`;
     });
     document.querySelector('#book-list').innerHTML = booklist;
@@ -52,3 +50,5 @@ const displayBookList = () => {
 window.addEventListener('DOMContentLoaded', displayBookList);
 
 document.querySelector('#book-form').addEventListener('submit', newBook);
+
+document.querySelector('#button').addEventListener('click', removeBook());
