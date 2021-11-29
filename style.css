@@ -12,6 +12,10 @@
   margin-bottom: 0;
 }
 
+.hide {
+  display: none;
+}
+
 .bookdiv {
   flex: 1;
   display: flex;
