@@ -1,0 +1,66 @@
+.section1 {
+  display: flex;
+  max-width: 100%;
+  flex-direction: column;
+  padding-left: 2%;
+}
+
+.awesome {
+  flex: 1;
+  display: flex;
+  font-size: 2em;
+  margin-bottom: 0;
+}
+
+.bookdiv {
+  flex: 1;
+  display: flex;
+  margin-bottom: 1%;
+  margin-top: 1%;
+  flex-direction: column;
+  max-width: 30%;
+}
+
+.tit {
+  margin-top: 9px;
+  margin-bottom: 2px;
+  color: #000;
+  font-weight: 600;
+}
+
+.auth {
+  margin-top: 5px;
+  margin-bottom: 0;
+  color: #000;
+  font-weight: 600;
+}
+
+.delete {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  margin-bottom: 1.5%;
+}
+
+.addbutton {
+  flex: 1;
+  width: 3%;
+  color: #000;
+  font-weight: 600;
+}
+
+.del {
+  display: none;
+}
