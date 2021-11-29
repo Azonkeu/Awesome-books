@@ -1,54 +1,31 @@
-let bookArr = [];
+const booky = {id: new Date().getTime() };
 
-const newBook = () => {
-  const title = document.querySelector('#title').value;
-  const author = document.querySelector('#author').value;
-  const book = { id: new Date().getTime(), title, author };
-  if (localStorage.getItem('data') !== null) {
-    bookArr = JSON.parse(localStorage.getItem('data'));
-    bookArr.push(book);
-    const convert = JSON.stringify(bookArr);
-    localStorage.setItem('data', convert);
-    window.location.reload();
-  } else {
-    bookArr.push(book);
-    const converted = JSON.stringify(bookArr);
-    localStorage.setItem('data', converted);
-    window.location.reload();
+class Book {
+  constructor(title, author, isbn = booky.id) {
+    this.title = title;
+    this.author = author;
+    this.isbn = isbn;
   }
-};
-
-function removeBook(id) {
-  const data = localStorage.getItem('data');
-  const convertedBooks = JSON.parse(data);
-  const remainingBooks = convertedBooks.filter((book) => book.id !== id);
-  const removedBooks = JSON.stringify(remainingBooks);
-  localStorage.setItem('data', removedBooks);
 }
 
-const displayBookList = () => {
-  const data = localStorage.getItem('data');
-  const books = JSON.parse(data);
-  document.querySelector('#book-list').innerHTML = 'No book saved';
-  if (books.length === 0) {
-    document.querySelector('#book-list').innerHTML = 'No book saved';
-  } else {
-    document.querySelector('#book-list').innerHTML = '';
-    let booklist = '';
-    books.forEach((book) => {
-      booklist += `<div>
-      <p class="tit">${book.title}</p>
-      <p class="auth">${book.author}</p>
-      <button class="delete" data-book-id = "${book.id}" id = "remove-button" onclick="removeBook(${book.id}), window.location.reload();">Remove</button>
-      <hr id="hr">
-      </div>`;
-    });
-    document.querySelector('#book-list').innerHTML = booklist;
+class UserInterface {
+  static displayBooks() {
+    const books = Store.getBooks();
+
+    books.forEach((book) => UserInterface.addBookToList(book));
   }
-};
 
-window.addEventListener('DOMContentLoaded', displayBookList);
+  static addBookToList(book) {
+    const list = document.querySelector('#book-list');
 
-document.querySelector('#book-form').addEventListener('submit', newBook);
+    const row = document.createElement('tr');
 
-document.querySelector('#button').addEventListener('click', removeBook());
+    row.innerHTML = `
+      <p>${book.title}</p>
+      <p>${book.author}</p>
+      <p class="hide">${book.isbn}</p>
+      <button><a href="#" class="btn btn-danger btn-sm delete">Remove</a></button>
+    `;
+
+    list.appendChild(row);
+  }
