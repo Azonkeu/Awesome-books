@@ -50,15 +50,18 @@ class UserInterface {
   static addBookToList(book) {
     const list = document.querySelector('#book-list');
 
-    const row = document.createElement('tr');
-
+    const row = document.createElement('div');
+    row.className = 'row';
     row.innerHTML = `
-      <p class="tit">${book.title}</p>
+      <div class="booBlock" id="boo">
+      <p class="tit">"${book.title}"</p>
+      <p class="by">by</p>
       <p class="auth">${book.author}</p>
       <p class="hide">${book.isbn}</p>
       <button class="delete"><a href="#" class="delete">Remove</a></button>
-      <hr>
+      </div>
     `;
+
 
     list.appendChild(row);
   }
