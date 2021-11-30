@@ -1,7 +1,7 @@
-const booky = { id: new Date().getTime() };
-
 class Book {
-  constructor(title, author, isbn = booky.id) {
+  booky = { id: new Date().getTime() };
+
+  constructor(title, author, isbn = this.booky.id) {
     this.title = title;
     this.author = author;
     this.isbn = isbn;
