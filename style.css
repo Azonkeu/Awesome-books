@@ -2,7 +2,8 @@
   display: flex;
   max-width: 100%;
   flex-direction: column;
-  padding-left: 2%;
+  padding-left: 20%;
+  padding-right: 20%;
 }
 
 .awesome {
@@ -10,6 +11,10 @@
   display: flex;
   font-size: 2em;
   margin-bottom: 0;
+  text-align: center;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hide {
@@ -20,49 +25,118 @@
   flex: 1;
   display: flex;
   margin-bottom: 1%;
-  margin-top: 1%;
+  margin-top: 4%;
   flex-direction: column;
-  max-width: 30%;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ddd;
+}
+
+.booBlock {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.row:nth-child(2n) {
+  background-color: #fff;
+}
+
+.row:nth-child(3n) {
+  background-color: #ddd;
 }
 
 .tit {
-  margin-top: 9px;
-  margin-bottom: 2px;
+  flex: 1;
+  color: #000;
+  font-weight: 600;
+  max-width: 15%;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.by {
+  flex: 1;
+  max-width: 6%;
   color: #000;
   font-weight: 600;
 }
 
 .auth {
-  margin-top: 5px;
-  margin-bottom: 0;
+  flex: 1;
   color: #000;
   font-weight: 600;
+  max-width: 15%;
+  margin-right: 0;
+  margin-left: 0;
 }
 
 .delete {
+  flex: 1;
   text-decoration: none;
   color: #000;
   font-weight: 600;
-  margin-top: 5px;
+  align-self: center;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  max-width: 25%;
+  justify-self: flex-end;
+  margin-left: auto;
+  margin-right: 0;
 }
 
 .form {
   flex: 1;
   display: flex;
   flex-direction: column;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3%;
+}
+
+.span {
+  background-color: #000;
+  border: 3px solid #000;
+  color: #000;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  margin-top: 5%;
+}
+
+.titleform {
+  flex: 1;
+  font-size: 2em;
+  text-align: center;
+  margin-top: 3%;
 }
 
 .form-group {
   flex: 1;
   display: flex;
   margin-bottom: 1.5%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  margin-top: 4%;
+}
+
+input {
+  width: 100%;
+  padding: 2%;
 }
 
 .addbutton {
   flex: 1;
-  width: 3%;
+  width: 30%;
   color: #000;
   font-weight: 600;
+  margin-top: 2%;
+  align-self: flex-end;
 }
 
 .del {
