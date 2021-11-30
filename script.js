@@ -62,7 +62,6 @@ class UserInterface {
       </div>
     `;
 
-
     list.appendChild(row);
   }
 
