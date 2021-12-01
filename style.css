@@ -91,6 +91,7 @@ li {
 }
 
 .section1 {
+  flex: 1;
   display: flex;
   max-width: 100%;
   flex-direction: column;
@@ -195,22 +196,12 @@ li {
 
 .form {
   flex: 1;
-  display: none;
+  display: flex;
   flex-direction: column;
   width: 40%;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 10%;
-}
-
-.span {
-  background-color: #000;
-  border: 3px solid #000;
-  color: #000;
-  margin-left: auto;
-  margin-right: auto;
-  width: 30%;
-  margin-top: 5%;
 }
 
 .titleform {
@@ -249,7 +240,8 @@ input {
 }
 
 .section2 {
-  display: none;
+  flex: 1;
+  display: flex;
   max-width: 100%;
   flex-direction: column;
   padding-left: 2%;
@@ -271,6 +263,7 @@ input {
 
 .text {
   flex: 1;
+  display: flex;
   font-size: 1.2em;
   font-weight: 600;
   margin-left: auto;
