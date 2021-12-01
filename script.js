@@ -52,6 +52,7 @@ class UserInterface {
 
     const row = document.createElement('div');
     row.className = 'row';
+    row.id = 'rowid';
     row.innerHTML = `
       <div class="booBlock" id="boo">
       <p class="tit">"${book.title}"</p>
@@ -115,3 +116,66 @@ document.querySelector('#book-list').addEventListener('click', (e) => {
 
   UserInterface.showAlert('Book Removed', 'success');
 });
+
+const body = document.getElementById('body');
+body.onload = function color() {
+  const colorNew = document.getElementById('list');
+  colorNew.classList.add('color');
+};
+
+const contact = document.getElementById('contact');
+const adding = document.getElementById('adding');
+
+const list = document.getElementById('list');
+list.onclick = function color() {
+  const colorNew = document.getElementById('list');
+  colorNew.classList.add('color');
+  adding.classList.remove('color');
+  contact.classList.remove('color');
+};
+list.addEventListener('click', () => {
+  document.getElementById('cont').style.display = 'none';
+  document.getElementById('book-form').style.display = 'none';
+  document.getElementById('book-list').style.display = 'flex';
+  document.getElementById('rowid').style.display = 'flex';
+  document.getElementById('awe').style.display = 'flex';
+  document.getElementById('spa').style.display = 'none';
+});
+
+adding.onclick = function colorx() {
+  const colorBlue = document.getElementById('adding');
+  colorBlue.classList.add('color');
+  list.classList.remove('color');
+  contact.classList.remove('color');
+};
+adding.addEventListener('click', () => {
+  document.getElementById('book-form').style.display = 'flex';
+  document.getElementById('book-list').style.display = 'none';
+  document.getElementById('rowid').style.display = 'none';
+  document.getElementById('awe').style.display = 'none';
+  document.getElementById('spa').style.display = 'none';
+  document.getElementById('cont').style.display = 'none';
+});
+
+contact.onclick = function colorx() {
+  const colorNe = document.getElementById('contact');
+  colorNe.classList.add('color');
+  list.classList.remove('color');
+  adding.classList.remove('color');
+};
+
+contact.addEventListener('click', () => {
+  document.getElementById('cont').style.display = 'flex';
+  document.getElementById('book-form').style.display = 'none';
+  document.getElementById('book-list').style.display = 'none';
+  document.getElementById('rowid').style.display = 'none';
+  document.getElementById('awe').style.display = 'none';
+  document.getElementById('spa').style.display = 'none';
+  document.getElementById('info').style.display = 'none';
+});
+
+/* eslint-disable */
+const result = luxon.DateTime.now().toLocaleString(luxon.DateTime.DATETIME_MED_WITH_SECONDS);
+
+const timing = document.getElementById('outtime');
+timing.innerHTML = result;
