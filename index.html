@@ -7,12 +7,20 @@
     <link rel="stylesheet" href="style.css">
     <title>Awesome Books</title>
 </head>
-<body>
-  <section class="section1">
-    <h1 class="awesome">All awesome books</h1>
+<body id="body" class="bod">
+  <header class="header" id="head">
+    <ul class="headerdiv">
+      <li class="listItem item1" ><span class="headtitle">Awesome Books</span> <a href="#sectionOne" id="list" class="headlist">List</a></li>
+      <li class="listItem item2" ><a href="#book-form" id="adding" class="headadd">Add new</a></li>
+      <li class="listItem item3" ><a href="#" id="contact" class="headcontact">Contact</a></li>
+    </ul>
+  </header>
+  <div id="outtime" class="time"></div>
+  <section class="section1" id="sectionOne">
+    <h1 class="awesome" id="awe">All awesome books</h1>
     <div id="book-list" class="bookdiv"></div>
       <form id="book-form" class="form">
-        <span class="span"></span>
+        <span class="span" id="spa"></span>
         <h2 class="titleform">Add a new book</h2>
         <div class="form-group">
           <label for="title"></label>
@@ -25,6 +33,20 @@
         <input type="submit" value="Add" class="addbutton">
       </form>
     </section>
+    <section class="section2" id="cont">
+      <h2 class="contactTitle">Contact information</h2>
+      <p class="text">Do have any questions or you just want to say "Hello"?<br>
+      You can reach out to us!</p>
+      <ul class="contactul">
+        <li class="ulitem">Our e-mail: mazonkeu@gmail.com</li>
+        <li class="ulitem">Our phone number: 0043586534422</li>
+        <li class="ulitem">Our address: Streetname22,84503 City, Country</li>
+      </ul>
+    </section>
+  <footer class="footer">
+   <p class="right">Copyright</p>
+  </footer>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.1.1/build/global/luxon.min.js"></script>
   <script src="script.js"></script>
   </body>
   </html>
