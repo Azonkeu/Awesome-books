@@ -23,7 +23,9 @@ In this project, we will build a basic website that allows users to add and remo
 
 Check out [my repository](https://github.com/Azonkeu/Awesome-books) for more details.
 
-Please click on this link to look at the live version of the [webpage]( ).
+
+## 🖥️ live Demo
+Here is the [live demo](https://azonkeu.github.io/Awesome-books/.)
 
 ### Built With
 * Major languages: Html5, Css3, Markdown
